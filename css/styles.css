@@ -1,0 +1,81 @@
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body header {
+  text-align: center;
+}
+
+body section {
+  width: 50%;
+  margin: auto 27%;
+}
+
+body section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body section div #task-input {
+  width: 99.2%;
+  font-size: 30px;
+}
+
+body section div .input-default {
+  color: #4852358c;
+}
+
+body section div .input-writing {
+  color: black;
+}
+
+body section #list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+}
+
+body section #list .task {
+  background: gray;
+}
+
+body section #list .task:hover {
+  color: red;
+}
+
+body section #filter {
+  border: 1px solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 7px;
+}
+
+body section #filter #tab {
+  color: black;
+}
+
+body section #filter #panel {
+  margin-left: 100px;
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body section #filter #panel .btn {
+  border: 1px solid #6a9c0c;
+  padding: 3px;
+}
+
+body section #filter #panel .btn:hover {
+  border: 1px solid #4852358c;
+  background: #4852358c;
+}
+/*# sourceMappingURL=styles.css.map */

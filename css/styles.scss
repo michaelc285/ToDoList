@@ -1,0 +1,72 @@
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  header {
+    text-align: center;
+  }
+
+  section {
+    width: 50%;
+    margin: auto 27%;
+
+    div {
+      display: flex;
+
+      #task-input {
+        width: 99.2%;
+        font-size: 30px;
+      }
+
+      .input-default {
+        color: #4852358c;
+      }
+
+      .input-writing {
+        color: black;
+      }
+    }
+
+    #list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-size: 30px;
+      .task {
+        background: gray;
+      }
+
+      .task:hover {
+        color: red;
+      }
+    }
+
+    #filter {
+      border: 1px solid green;
+      display: flex;
+      padding: 7px;
+
+      #tab {
+        color: black;
+      }
+
+      #panel {
+        margin-left: 100px;
+        width: 35%;
+        display: flex;
+
+        justify-content: space-around;
+        .btn {
+          border: 1px solid #6a9c0c;
+          padding: 3px;
+        }
+
+        .btn:hover {
+          border: 1px solid #4852358c;
+          background: #4852358c;
+        }
+      }
+    }
+  }
+}
