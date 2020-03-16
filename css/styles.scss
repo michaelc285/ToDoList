@@ -1,72 +1,85 @@
-body {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+$phone: 500px;
 
-  header {
-    text-align: center;
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+.container {
+  margin-top: 50px;
+  border: 1px solid #8080807e;
+  border-radius: 15px;
+  box-shadow: 0.5px 0.5px rgb(41, 40, 40);
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  position: relative;
+
+  span#date {
+    position: absolute;
+    bottom: 10px;
   }
 
-  section {
-    width: 50%;
-    margin: auto 27%;
+  .clear {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
 
-    div {
-      display: flex;
+  .clear i:hover {
+    transform: rotate(45deg);
+  }
+}
 
-      #task-input {
-        width: 99.2%;
-        font-size: 30px;
-      }
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
 
-      .input-default {
-        color: #4852358c;
-      }
+li {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  border-bottom: 1px rgba(128, 128, 128, 0.315) solid;
 
-      .input-writing {
-        color: black;
-      }
+  .text {
+    margin: auto 0px auto 10px;
+  }
+
+  .fa.fa-times-circle {
+    margin-left: auto;
+  }
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.bottom {
+  display: flex;
+
+  #itemCount {
+    margin: auto 10px auto auto;
+  }
+}
+
+@include phone {
+  .bottom {
+    display: flex;
+    flex-direction: column;
+
+    #itemCount {
+      margin: auto auto;
     }
 
-    #list {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      font-size: 30px;
-      .task {
-        background: gray;
-      }
-
-      .task:hover {
-        color: red;
-      }
-    }
-
-    #filter {
-      border: 1px solid green;
+    #panel {
       display: flex;
-      padding: 7px;
-
-      #tab {
-        color: black;
-      }
-
-      #panel {
-        margin-left: 100px;
-        width: 35%;
-        display: flex;
-
-        justify-content: space-around;
-        .btn {
-          border: 1px solid #6a9c0c;
-          padding: 3px;
-        }
-
-        .btn:hover {
-          border: 1px solid #4852358c;
-          background: #4852358c;
-        }
-      }
+      justify-content: space-around;
     }
   }
 }

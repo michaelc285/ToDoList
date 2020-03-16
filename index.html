@@ -3,32 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/586c210d61.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
     <link rel="stylesheet" href="/css/styles.css" />
     <title>To do List</title>
   </head>
   <body>
-    <header>
-      <h1>To Do List</h1>
-    </header>
-
-    <section>
-      <div>
-        <button>V</button>
-        <input type="text" id="task-input" name="task" class="input-default" />
+    <div class="container">
+      <div class="header">
+        <span id="date"></span>
+        <div class="clear">
+          <i class="fa fa-refresh"></i>
+        </div>
       </div>
 
-      <ul id="list"></ul>
+      <div class="add-item">
+        <input
+          type="text"
+          id="task-input"
+          class="form-control todo-list-input"
+          placeholder="What do you need to do today?"
+        />
+      </div>
 
-      <div id="filter">
-        <span id="tab">1 item left</span>
+      <div class="content">
+        <ul id="list"></ul>
+      </div>
+
+      <div class="bottom">
         <div id="panel">
           <button id="btn-all" class="btn">All</button>
           <button id="btn-active" class="btn">Active</button>
           <button id="btn-complete" class="btn">Completed</button>
         </div>
+        <span id="itemCount"></span>
       </div>
-    </section>
+    </div>
 
     <script src="/script.js"></script>
   </body>
 </html>
+<!-- 
+
+

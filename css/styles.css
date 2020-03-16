@@ -1,81 +1,92 @@
-body {
+.container {
+  margin-top: 50px;
+  border: 1px solid #8080807e;
+  border-radius: 15px;
+  -webkit-box-shadow: 0.5px 0.5px #292828;
+          box-shadow: 0.5px 0.5px #292828;
+}
+
+.header {
+  height: 80px;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  position: relative;
 }
 
-body header {
-  text-align: center;
+.header span#date {
+  position: absolute;
+  bottom: 10px;
 }
 
-body section {
-  width: 50%;
-  margin: auto 27%;
+.header .clear {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
-body section div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.header .clear i:hover {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
-body section div #task-input {
-  width: 99.2%;
-  font-size: 30px;
-}
-
-body section div .input-default {
-  color: #4852358c;
-}
-
-body section div .input-writing {
-  color: black;
-}
-
-body section #list {
+ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-  font-size: 30px;
+  padding: 0px;
 }
 
-body section #list .task {
-  background: gray;
-}
-
-body section #list .task:hover {
-  color: red;
-}
-
-body section #filter {
-  border: 1px solid green;
+li {
+  padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+  border-bottom: 1px rgba(128, 128, 128, 0.315) solid;
 }
 
-body section #filter #tab {
-  color: black;
+li .text {
+  margin: auto 0px auto 10px;
 }
 
-body section #filter #panel {
-  margin-left: 100px;
-  width: 35%;
+li .fa.fa-times-circle {
+  margin-left: auto;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
-body section #filter #panel .btn {
-  border: 1px solid #6a9c0c;
-  padding: 3px;
+.bottom #itemCount {
+  margin: auto 10px auto auto;
 }
 
-body section #filter #panel .btn:hover {
-  border: 1px solid #4852358c;
-  background: #4852358c;
+@media (max-width: 500px) {
+  .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bottom #itemCount {
+    margin: auto auto;
+  }
+  .bottom #panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
