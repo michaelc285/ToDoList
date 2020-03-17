@@ -124,10 +124,12 @@ list.addEventListener("click", function(e) {
 function itemCount() {
   let count = taskList.filter(
     task => task.clear === false && task.trash !== true
-  ).length;
-
+  );
+  console.log(count.length);
   const string =
-    count.length < 2 ? `${count} item left` : `${count} items left`;
+    count.length < 2
+      ? `${count.length} item left`
+      : `${count.length} items left`;
 
   countSpan.innerHTML = string;
 }
